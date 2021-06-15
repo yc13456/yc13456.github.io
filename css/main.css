@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body,html {
+    width: 100%;
+    height: 100%;
+
+    font-family: 华文黑;
+}
+
+.header{
+    width: 100%;
+    height: 8%;
+    float: top;
+    text-align: center;
+	background-color: antiquewhite;
+	font-size: 30px;
+}
+.main{
+	width: 100%;
+	height: 70%;
+	float: top;
+	
+}
+
+
+#region0{
+	width: 100%;
+	height: 100%;
+	float: top;
+	
+}
+
+.bbox{
+	width: 100%;
+	height: 10%;
+	margin: auto;
+	float: top;
+	text-align: center;
+	background-color: aqua;
+}
+.bbox a{
+	font-size: 25px;
+}
+
+.bbox li{
+	margin-left: 10%;
+}
+/* 第一张图片 */
+.img{
+	width: 100%;
+	height: 20%;
+	text-align: center;
+	float: top;
+}
+/* 文字介绍1 */
+.region1{
+	width: 100%;
+	height: 40%;
+	float: top;
+}
+.text1{
+	width: 100%;
+	height: 10%;
+	font-size: 20px;
+	float: top;
+	text-align: center;
+}
+
+.text2{
+	width: 100%;
+	height: 60%;
+	float: top;
+	font-size: 18px;
+}
+/* 图片区域 */
+.img_region{
+	width: 100%;
+	height: 30%;
+	float: top;
+}
+.img1{
+	height: 100%;
+	width: auto;
+	float: left;
+	background-color: aqua;
+	/* margin-left: 56px; */
+}
+/* 	
+.img1 img{
+	width: 80%;
+	height: 80%;
+	padding: 10px;
+} */
+/* 上下布局 */
+.main_top{
+	height: 100%;
+	width: 100%;
+	float: top;
+}
+
+.top1{
+	height: 200px;
+	width: 70%;
+	float: top;
+	margin:auto;
+	padding-left: 3%;
+	padding-right: 3%;
+	background-color: aquamarine;
+}
+/* 左右布局--左 */
+.left_port{
+	height: 100%;
+	width: 30%;
+	float: left;
+	margin: auto;
+}
+/* 左右布局--右 */
+.right_port{
+	height: 100%;
+	width: 70%;
+	float: right;
+	margin: auto;
+}
+
+.left_port2{
+	height: 100%;
+	width: 70%;
+	float: left;
+	margin: auto;
+}
+.right_port2{
+	height: 100%;
+	width: 30%;
+	float: right;
+	/* margin-left: 200px; */
+	margin: auto;
+}
