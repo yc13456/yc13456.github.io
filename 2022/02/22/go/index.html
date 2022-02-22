@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>go - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="GOlanggolang基础语言特性自动垃圾回收​    系统会自动帮我们判断，并在合适的时候（比如CPU 相对空闲的时候）进行自动垃圾收集工作
+更丰富的内置类型
+除了几乎所有语言都支持的简单内置类,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="go - Hexo"/>
+    <meta name="twitter:description" content="GOlanggolang基础语言特性自动垃圾回收​    系统会自动帮我们判断，并在合适的时候（比如CPU 相对空闲的时候）进行自动垃圾收集工作
+更丰富的内置类型
+除了几乎所有语言都支持的简单内置类,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="go - Hexo"/>
+    <meta property="og:description" content="GOlanggolang基础语言特性自动垃圾回收​    系统会自动帮我们判断，并在合适的时候（比如CPU 相对空闲的时候）进行自动垃圾收集工作
+更丰富的内置类型
+除了几乎所有语言都支持的简单内置类,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">go</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">go</h1>
+        <div class="stuff">
+            <span>二月 22, 2022</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="GOlang"><a href="#GOlang" class="headerlink" title="GOlang"></a>GOlang</h1><h2 id="golang基础"><a href="#golang基础" class="headerlink" title="golang基础"></a>golang基础</h2><h3 id="语言特性"><a href="#语言特性" class="headerlink" title="语言特性"></a>语言特性</h3><h4 id="自动垃圾回收"><a href="#自动垃圾回收" class="headerlink" title="自动垃圾回收"></a>自动垃圾回收</h4><p>​    系统会自动帮我们判断，并在合适的时候（比如CPU 相对空闲的时候）进行自动垃圾收集工作</p>
+<h4 id="更丰富的内置类型"><a href="#更丰富的内置类型" class="headerlink" title="更丰富的内置类型"></a>更丰富的内置类型</h4><ol>
+<li>除了几乎所有语言都支持的简单内置类型</li>
+<li>数组切片（Slice）:一种可动态增 长的数组</li>
+<li>字典类型（map）</li>
+</ol>
+<h4 id="函数多返回值"><a href="#函数多返回值" class="headerlink" title="函数多返回值"></a>函数多返回值</h4><h4 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h4><ol>
+<li>defer、</li>
+<li>panic</li>
+<li>recover</li>
+</ol>
+<h4 id="匿名函数和闭包"><a href="#匿名函数和闭包" class="headerlink" title="匿名函数和闭包"></a>匿名函数和闭包</h4><p>​    所有的函数也是值类型，可以作为参数传递</p>
+<h4 id="类型和接口"><a href="#类型和接口" class="headerlink" title="类型和接口"></a>类型和接口</h4><ol>
+<li><p>类型定义非常接近于C语言中的结构（struct），甚至直接沿用了struct关键字</p>
+</li>
+<li><p>只是支持了最基本的类型组合功能</p>
+</li>
+<li><p>“非侵入式” 接口（接口的修改不会影响到所有改该接口的类型）</p>
+<p>实现了接口的全部方法，就可以直接转换</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">type Bird struct &#123;</span><br><span class="line"> ...</span><br><span class="line">&#125;</span><br><span class="line">func (b *Bird) Fly() &#123;</span><br><span class="line"> // 以鸟的方式飞行</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">另外一个包</span><br><span class="line">type IFly interface &#123;</span><br><span class="line"> Fly()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line"> var fly IFly = new(Bird)</span><br><span class="line"> fly.Fly()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="并发编程"><a href="#并发编程" class="headerlink" title="并发编程"></a>并发编程</h4><ol>
+<li>使用goroutine而不是裸用 操作系统的并发机制，</li>
+<li>Go语言实现了CSP（通信顺序进程，Communicating Sequential Process）模型来作为goroutine 间的推荐通信方式</li>
+</ol>
+<h4 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h4><ol>
+<li>无法做到像Java那样通过类型字符串创建对象实例</li>
+<li>对象的序列化（serialization，有时候也叫Marshal &amp; Unmarshal）（Go语言标准库的encoding&#x2F;json、encoding&#x2F;xml、encoding&#x2F;gob、encoding&#x2F;binary等包就大量 依赖于反射功能）</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reflect.ValueOf(sparrow).Elem()  # 相当于对类型*操作</span><br></pre></td></tr></table></figure>
+
+<h4 id="语言交互性"><a href="#语言交互性" class="headerlink" title="语言交互性"></a>语言交互性</h4><ol>
+<li>go中，可以按Cgo的特定语法混合编写C语言代码，然后Cgo工具可以将这些混合的C 代码提取并生成对于C功能的调用包装代码</li>
+</ol>
+<h3 id="Go-程序"><a href="#Go-程序" class="headerlink" title="Go 程序"></a>Go 程序</h3><h4 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a>代码解读</h4><ol>
+<li>Go文件的开头package声明，表示Go代码所属的包</li>
+<li>包是Go语言里最基本的分发单位，也是工程管理中依赖关系的体现</li>
+<li>生成Go可执行程序，必须建立一个名 字为main的包，并且在该包中包含一个叫main()的函数（该函数是Go可执行程序的执行起点）</li>
+<li>import语句，导入该程序所依赖的包</li>
+<li>不得包含在源代码文件中没有用到的包</li>
+<li>所有Go函数以关键字func开头</li>
+<li>在函数返回时没有被明确赋值的返回值都会被设置为默认值，比如result会被设为0.0，err会被设为nil</li>
+<li>&#x2F;* 块注释 *&#x2F;    &#x2F;&#x2F; 行注释</li>
+</ol>
+<h4 id="编译环境准备"><a href="#编译环境准备" class="headerlink" title="编译环境准备"></a>编译环境准备</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># golang文件安装在/usr/local/</span><br><span class="line">export GOROOT=/usr/local/go</span><br><span class="line">export PATH=$PATH:$GOROOT/bin</span><br></pre></td></tr></table></figure>
+
+<h3 id="顺序编程"><a href="#顺序编程" class="headerlink" title="顺序编程"></a>顺序编程</h3><h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><h3 id="辨析"><a href="#辨析" class="headerlink" title="辨析"></a>辨析</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x27;&#123;&#x27;不能单独放在一行,&#x27;&#125;&#x27;可以单独放一行</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">声明变量的一般形式是使用 var 关键字：</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">单纯地给 a 赋值也是不够的，这个值必须被使用()</span><br><span class="line"></span><br><span class="line">全局变量是允许声明但不使用的。 同一类型的多个变量可以声明在同一行</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">常量是一个简单值的标识符，在程序运行时，不会被修改的量。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在数组上使用range将传入index和值两个变量：</span><br><span class="line">nums := []int&#123;2, 3, 4&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">被defer标记的d函数中的程序“立即执行”，而d函数返回的函数则在测试方法结束后 按照“后进先出”的顺序执行（栈的形式）</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">User:结构体</span><br><span class="line">map[string]User 	//定义一个集合，&#x27;key&#x27;:string类型；value:&#x27;User&#x27;结构体类型</span><br><span class="line">make[map[string]User]	//定义一个切片，元素是map集合</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.go总是先从GOROOT出先搜索，再从GOPATH列出的路径顺序中搜索，只要一搜索到合适的包就理解停止。当搜索完了仍搜索不到包时，将报错。</span><br><span class="line">2.搜索路径都是放在src下面</span><br></pre></td></tr></table></figure>
+
+<h4 id="nil与NULL的区别"><a href="#nil与NULL的区别" class="headerlink" title="nil与NULL的区别"></a>nil与NULL的区别</h4><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">nil</th>
+<th align="center">NULL</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">初始化值</td>
+<td align="center">nil</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">真假判断</td>
+<td align="center">只有nil与false表示假，其余均为真</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">赋值对象</td>
+<td align="center">nil一般赋值给空对象</td>
+<td align="center">NULL一般赋值给nil之外的空值</td>
+</tr>
+<tr>
+<td align="center">空值情况</td>
+<td align="center">nil是一个对象指针为空</td>
+<td align="center">NULL是一个类指针为空，其基本数据类型为空</td>
+</tr>
+</tbody></table>
+<h5 id="修改go语言环境配置"><a href="#修改go语言环境配置" class="headerlink" title="修改go语言环境配置"></a>修改go语言环境配置</h5><p>当你安装的GO的语言版本大于1.13的时候，那么就不用这么麻烦了，直接使用go env -w命令就行了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">例如：</span><br><span class="line">go env -w GOPROXY=https://goproxy.io,direct</span><br><span class="line"># Set environment variable allow bypassing the proxy for selected modules</span><br><span class="line">go env -w GOPRIVATE=*.corp.example.com</span><br><span class="line">go env -w GO111MODULE=on</span><br></pre></td></tr></table></figure>
+
+<h4 id="GOLang匿名函数"><a href="#GOLang匿名函数" class="headerlink" title="GOLang匿名函数"></a>GOLang匿名函数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#Go 语言支持匿名函数，可作为闭包。匿名函数是一个&quot;内联&quot;语句或表达式。匿名函数的优越性在于可以直接使用函数内的变量</span><br><span class="line">#	开发一个形式方法名或者参数，做为该函数构建入口。</span><br><span class="line">#	如：</span><br><span class="line">func getSequence() func() int &#123;</span><br><span class="line">   i:=0</span><br><span class="line">   return func() int &#123;</span><br><span class="line">      i+=1</span><br><span class="line">     return i  </span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main()&#123;</span><br><span class="line">   /* nextNumber 为一个函数，函数 i 为 0 */</span><br><span class="line">   nextNumber := getSequence()  </span><br><span class="line">   /* 调用 nextNumber 函数，i 变量自增 1 并返回 */</span><br><span class="line">   fmt.Println(nextNumber())</span><br><span class="line">   fmt.Println(nextNumber())</span><br><span class="line">&#125;</span><br><span class="line">#匿名函数返回一个函数时，使用该函数的时候，函数里面的变量会保存下来，下次可以收到该该改变。</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="示例程序"><a href="#示例程序" class="headerlink" title="示例程序"></a>示例程序</h2><h4 id="1、iota实例"><a href="#1、iota实例" class="headerlink" title="1、iota实例"></a>1、iota实例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#iota：常量自动生成器</span><br><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line">const (</span><br><span class="line">    i=1&lt;&lt;iota</span><br><span class="line">    j=3&lt;&lt;iota</span><br><span class="line">    k</span><br><span class="line">    l</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    fmt.Println(&quot;i=&quot;,i)</span><br><span class="line">    fmt.Println(&quot;j=&quot;,j)</span><br><span class="line">    fmt.Println(&quot;k=&quot;,k)</span><br><span class="line">    fmt.Println(&quot;l=&quot;,l)</span><br><span class="line">&#125;</span><br><span class="line">#结果：</span><br><span class="line">i= 1</span><br><span class="line">j= 6</span><br><span class="line">k= 12</span><br><span class="line">l= 24</span><br><span class="line">#赋常量，出现一行有常量没有赋初值，系统会按照上一行的数据格式赋予初值</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、位运算符号"><a href="#2、位运算符号" class="headerlink" title="2、位运算符号"></a>2、位运算符号</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> c <span class="type">int</span></span><br><span class="line">c=<span class="number">4</span></span><br><span class="line">c &lt;&lt;=  <span class="number">2</span></span><br><span class="line">fmt.Printf(<span class="string">&quot;第 6行  - &lt;&lt;= 运算符实例，c 值为 = %d\n&quot;</span>, c )</span><br><span class="line">c &gt;&gt;=  <span class="number">2</span></span><br><span class="line">fmt.Printf(<span class="string">&quot;第 7 行 - &gt;&gt;= 运算符实例，c 值为 = %d\n&quot;</span>, c )</span><br><span class="line">结果:</span><br><span class="line">第 <span class="number">6</span>行  - &lt;&lt;= 运算符实例，c 值为 = <span class="number">16</span></span><br><span class="line">第 <span class="number">7</span> 行 - &gt;&gt;= 运算符实例，c 值为 = <span class="number">4</span></span><br><span class="line">#十进制<span class="type">int</span>整形数据，右移后赋值，位数不够的，保持原状？</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、go语言函数闭包"><a href="#3、go语言函数闭包" class="headerlink" title="3、go语言函数闭包"></a>3、go语言函数闭包</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func getSequence() func() int &#123;</span><br><span class="line">   i:=0</span><br><span class="line">   return func() int &#123;</span><br><span class="line">      i+=1</span><br><span class="line">     return i  </span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main()&#123;</span><br><span class="line">   /* nextNumber 为一个函数，函数 i 为 0 */</span><br><span class="line">   nextNumber := getSequence()  </span><br><span class="line"></span><br><span class="line">   /* 调用 nextNumber 函数，i 变量自增 1 并返回 */</span><br><span class="line">   fmt.Println(nextNumber())</span><br><span class="line">   fmt.Println(nextNumber())</span><br><span class="line">   fmt.Println(nextNumber())</span><br><span class="line">   </span><br><span class="line">   /* 创建新的函数 nextNumber1，并查看结果 */</span><br><span class="line">   nextNumber1 := getSequence()  </span><br><span class="line">   fmt.Println(nextNumber1())</span><br><span class="line">   fmt.Println(nextNumber1())</span><br><span class="line">&#125;</span><br><span class="line">#执行结果：</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line"></span><br><span class="line">#为什么数据会在执行nextNumber1()函数之后，i会一直保存叠加？</span><br><span class="line">#匿名函数返回一个函数时，使用该函数的时候，函数里面的变量会保存下来，下次可以收到该该改变。</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、for循环切片"><a href="#4、for循环切片" class="headerlink" title="4、for循环切片"></a>4、for循环切片</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">func main() &#123;</span><br><span class="line">	//这是我们使用range去求一个slice的和。使用数组跟这个很类似</span><br><span class="line">	nums := []int&#123;2, 3, 4&#125;</span><br><span class="line">	sum := 0</span><br><span class="line">	for _, num := range nums &#123;</span><br><span class="line">		sum += num</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(&quot;sum:&quot;, sum)</span><br><span class="line">&#125;</span><br><span class="line">#结果：9</span><br><span class="line">#但是如下图，结果是3</span><br><span class="line">#大概是固定搭配，切片状态，使用for循环需要使用给两个返回值。map</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:/Users/yc/Pictures/typora_Images/3.png" alt="3"></p>
+<h4 id="5、go实现接口"><a href="#5、go实现接口" class="headerlink" title="5、go实现接口"></a>5、go实现接口</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import (</span><br><span class="line">    &quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">type Phone interface &#123;</span><br><span class="line">    call()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type NokiaPhone struct &#123;</span><br><span class="line">&#125;</span><br><span class="line">#实现接口的nokiaPhone方法</span><br><span class="line">func (nokiaPhone NokiaPhone) call() &#123;</span><br><span class="line">    fmt.Println(&quot;I am Nokia, I can call you!&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type IPhone struct &#123;</span><br><span class="line">&#125;</span><br><span class="line">#实现接口的iPhone方法</span><br><span class="line">func (iPhone IPhone) call() &#123;</span><br><span class="line">    fmt.Println(&quot;I am iPhone, I can call you!&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    var phone Phone</span><br><span class="line">    phone = new(NokiaPhone)</span><br><span class="line">    #这儿new的是结构体？还是实现接口的方法？</span><br><span class="line">    phone.call()</span><br><span class="line">   </span><br><span class="line">    phone = new(IPhone)</span><br><span class="line">    phone.call()</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">#接口实现的方式不太清晰？</span><br><span class="line">#方法名前面定义的部分，代表方法需要哪些结构。所以上述给一个结构体之后，便拥有了该方法的全部实现方法</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、通道-chan-实现"><a href="#5、通道-chan-实现" class="headerlink" title="5、通道(chan)实现"></a>5、通道(chan)实现</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.通道有一个默认缓冲区，可以保存输送到管道的数据。</span><br><span class="line">2.管道内部数据被拿出打印或者其他操作，就看作缓冲区数据被消费一个</span><br></pre></td></tr></table></figure>
+
+<h4 id="6、defer延迟执行"><a href="#6、defer延迟执行" class="headerlink" title="6、defer延迟执行"></a>6、defer延迟执行</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">func GetCount() int &#123;</span><br><span class="line">    // 锁定</span><br><span class="line">    countGuard.Lock()</span><br><span class="line">    // 在函数退出时解除锁定</span><br><span class="line">    defer countGuard.Unlock()</span><br><span class="line">    return count</span><br><span class="line">&#125;</span><br><span class="line">func SetCount(c int) &#123;</span><br><span class="line">    countGuard.Lock()</span><br><span class="line">    count = c</span><br><span class="line">    countGuard.Unlock()</span><br><span class="line">&#125;</span><br><span class="line">//使用defer延迟执行有意义吗？</span><br><span class="line">//都是等待函数执行结束，只不过defer“先进后出”</span><br></pre></td></tr></table></figure>
+
+<h4 id="7、golang中-byte-和-byte"><a href="#7、golang中-byte-和-byte" class="headerlink" title="7、golang中.([]byte)和 []byte()"></a>7、golang中.([]byte)和 []byte()</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.([]byte)</span><br><span class="line">value, ok := var.([]byte)</span><br><span class="line">//这是标准的golang类型断言(Type Assertion)。这里的var一般是一个interface&#123;&#125;类型的变量。这句的字面含义是“我认为var这个interface&#123;&#125;类型变量的underlying type是[]byte，如果是，请将其值赋给变量value，并且ok =true，如果不是ok = false。</span><br><span class="line"></span><br><span class="line">[]byte() </span><br><span class="line">value, ok := []byte(var) </span><br><span class="line">//这是标准的golang显式转型，将变量var转换成[]byte类型，并赋值给value</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="8、Golang-函数和方法的区别"><a href="#8、Golang-函数和方法的区别" class="headerlink" title="8、Golang 函数和方法的区别"></a>8、Golang 函数和方法的区别</h4><table>
+<thead>
+<tr>
+<th></th>
+<th>函数</th>
+<th>方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>含义</td>
+<td>函数function是⼀段具有独⽴功能的代码，可以被反复多次调⽤，从⽽实现代码复⽤</td>
+<td>⽅法method是⼀个类的⾏为功能，只有该类的对象才能调⽤。</td>
+</tr>
+<tr>
+<td>接收者</td>
+<td>函数⽆接受者</td>
+<td>⽅法有接受者</td>
+</tr>
+<tr>
+<td>作用对象</td>
+<td>没有作⽤对象</td>
+<td>具有作⽤对象</td>
+</tr>
+<tr>
+<td>命名</td>
+<td>函数不可以重名</td>
+<td>⽅法可以重名</td>
+</tr>
+<tr>
+<td>调用方式</td>
+<td>函数是直接调用</td>
+<td>方法由struct对象通过.点号调用</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.Go语⾔，同时有函数和⽅法，⽅法的本质是函数，但是⽅法和函数⼜具有不同点。</span><br><span class="line">2.⼀个⽅法就是⼀个包含了接受者的函数；</span><br><span class="line">3.Go语⾔中， 接受者的类型可以是任何类型，不仅仅是结构体， 也可以是struct类型外的其他任何类型</span><br></pre></td></tr></table></figure>
+
+<h4 id="9、net标准库"><a href="#9、net标准库" class="headerlink" title="9、net标准库"></a>9、net标准库</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listen, err := net.Listen(&quot;tcp&quot;, &quot;192.168.79.1:8080&quot;)	//监听ip和端口</span><br><span class="line">con, err := listen.Accept()		//监听客户端连接，返回socket连接句柄</span><br><span class="line">data := make([]byte, 1000)	//接受客户端数据缓冲区</span><br><span class="line">n, err := con.Read(data)	//读取数据</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">//简单的TCP服务器</span><br><span class="line">package main</span><br><span class="line"></span><br><span class="line">import(</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	&quot;net&quot;</span><br><span class="line">)</span><br><span class="line">func Read(con net.Conn)&#123;</span><br><span class="line">	data := make([]byte, 1000)</span><br><span class="line">	for&#123;</span><br><span class="line">		n, err := con.Read(data)</span><br><span class="line">		if err != nil&#123;</span><br><span class="line">			fmt.Println(err)</span><br><span class="line">			break</span><br><span class="line">		&#125;</span><br><span class="line">		fmt.Println(string(data[0:n]))</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">func main()&#123;</span><br><span class="line">	listen, err := net.Listen(&quot;tcp&quot;, &quot;192.168.79.1:8080&quot;)</span><br><span class="line">	if err != nil&#123;</span><br><span class="line">		fmt.Println(err)</span><br><span class="line">		return</span><br><span class="line">	&#125;</span><br><span class="line">	for&#123;</span><br><span class="line">		con, err := listen.Accept()</span><br><span class="line">		if err != nil&#123;</span><br><span class="line">			fmt.Println(err)</span><br><span class="line">			continue</span><br><span class="line">		&#125;</span><br><span class="line">		go Read(con)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">//客户端（linux系统安装NC服务）直接用：</span><br><span class="line">nc 192.168.79.1 8080</span><br><span class="line">//服务端会监听本机ip中的8080端口，然后接受客户端的连接请求，连接成功之后，读取来自客户端的数据，并打印出来。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">//简单的HTTP服务</span><br><span class="line">package main</span><br><span class="line"></span><br><span class="line">import(</span><br><span class="line">	&quot;fmt&quot;</span><br><span class="line">	&quot;net/http&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func HandleIndex(w http.ResponseWriter, r *http.Request)&#123;</span><br><span class="line">	r.ParseForm()</span><br><span class="line">	fmt.Println(&quot;PATH: &quot;, r.URL.Path)</span><br><span class="line">	fmt.Println(&quot;SCHEME: &quot;, r.URL.Scheme)</span><br><span class="line">	fmt.Println(&quot;METHOD: &quot;, r.Method)</span><br><span class="line">	fmt.Println()</span><br><span class="line">	fmt.Fprintf(w,  &quot;&lt;h1&gt;Index Page&lt;/h1&gt;&quot;)</span><br><span class="line">	fmt.Println(w)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main()&#123;</span><br><span class="line">	fmt.Println(&quot;Start&quot;)</span><br><span class="line">	http.HandleFunc(&quot;/&quot;, HandleIndex)</span><br><span class="line">	err := http.ListenAndServe(&quot;:8000&quot;, nil)</span><br><span class="line">	if err != nil&#123;</span><br><span class="line">		fmt.Println(err)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="10、go语言err异常处理要放在正确返回值后面"><a href="#10、go语言err异常处理要放在正确返回值后面" class="headerlink" title="10、go语言err异常处理要放在正确返回值后面"></a>10、go语言err异常处理要放在正确返回值后面</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">n, err := con.Read(data)</span><br><span class="line">fmt.Println(&quot;n&quot;,n)</span><br><span class="line">//退出</span><br><span class="line">if n == 0 &#123;</span><br><span class="line">	quit1(&amp;newuser ,con)</span><br><span class="line">	//下线广播</span><br><span class="line">	msginfo := fmt.Sprintf(&quot;id:%s,name:%s 下线了...\n&quot;, newuser.id, newuser.name)</span><br><span class="line">	message &lt;- msginfo</span><br><span class="line">&#125;</span><br><span class="line">if err != nil&#123;</span><br><span class="line">	fmt.Println(err)</span><br><span class="line">	break</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="11、Channel读写"><a href="#11、Channel读写" class="headerlink" title="11、Channel读写"></a>11、Channel读写</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">读或者写一个nil的channel的操作会永远阻塞。</span><br><span class="line">读一个关闭的channel会立刻返回一个channel元索类型的零值。</span><br><span class="line">写一个关闭的channel会导致panic。</span><br><span class="line">map也是指针，实际数据在堆中，未初始化的值是nil。</span><br></pre></td></tr></table></figure>
+
+<h2 id="网络处理库"><a href="#网络处理库" class="headerlink" title="网络处理库"></a>网络处理库</h2><h4 id="pprof"><a href="#pprof" class="headerlink" title="pprof"></a>pprof</h4><p>是 Go 语言中分析程序运行性能的工具，它能提供各种性能数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m.Handle(&quot;/debug/pprof/cmdline&quot;, http.HandlerFunc(pprof.Cmdline))</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://user-images.githubusercontent.com/7698088/68523507-3ce36500-02f5-11ea-8e8f-438c9ef2b9f8.png" alt="pprof 采集的信息类型"></p>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="struct"><a href="#struct" class="headerlink" title="struct{}"></a>struct{}</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">stopflag := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">struct</span>&#123;&#125;)</span><br><span class="line">stopflag &lt;- <span class="keyword">struct</span>&#123;&#125;&#123;&#125; <span class="comment">//写</span></span><br><span class="line">&lt;-stopflag			<span class="comment">//读</span></span><br><span class="line"><span class="string">&quot;struct&#123;&#125;&#123;&#125;&quot;</span>，第一个<span class="string">&quot;&#123;&#125;&quot;</span>对表示类型，第二个<span class="string">&quot;&#123;&#125;&quot;</span>对表示一个类型对象实例。</span><br></pre></td></tr></table></figure>
+
+<h2 id="go下载git项目"><a href="#go下载git项目" class="headerlink" title="go下载git项目"></a>go下载git项目</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1、git clone 源码</span><br><span class="line">2、go mod tidy</span><br><span class="line">3、go mod vendor</span><br><span class="line">4、go build main.go</span><br><span class="line"><span class="meta"># </span><span class="language-bash">例子下载gitlab.gizwits.com项目</span></span><br><span class="line">1.安装go</span><br><span class="line">2、配置go env </span><br><span class="line">GONOPROXY=&quot;*.gizwits.com&quot;</span><br><span class="line">GONOSUMDB=&quot;*.gizwits.com&quot;</span><br><span class="line">GOPROXY=&quot;https://goproxy.cn,direct&quot;	</span><br><span class="line">GO111MODULE=off #关闭go mod</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">注意：Go get报错 fatal: could not <span class="built_in">read</span> Username <span class="keyword">for</span> <span class="string">&#x27;https://xxx&#x27;</span>: terminal prompts disabled</span></span><br><span class="line">git config --global --add url.&quot;git@gitlab.gizwits.com:&quot;.insteadOf &quot;https://github.com/&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>运行环境</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export GOROOT=~/go</span><br><span class="line">export PATH=$PATH:$GOROOT/bin</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="小工具代码"><a href="#小工具代码" class="headerlink" title="小工具代码"></a>小工具代码</h2><h3 id="读取yaml文件"><a href="#读取yaml文件" class="headerlink" title="读取yaml文件"></a>读取yaml文件</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">parameter:</span></span><br><span class="line">  <span class="attr">originPk:</span> <span class="string">&quot;36b62c8efa114d8aafe338aaca84f171&quot;</span></span><br><span class="line">  <span class="attr">originPs:</span> <span class="string">&quot;7a54dc0200564c7aa3eae7fdb83cb38d&quot;</span></span><br><span class="line">  <span class="attr">targetPk:</span> <span class="string">&quot;104be435e6e04486ace3da9563e07677&quot;</span></span><br><span class="line">  <span class="attr">targetPs:</span> <span class="string">&quot;319514c872dd49aeb4106023a9b93e65&quot;</span></span><br><span class="line">  <span class="comment"># OTA设备数量</span></span><br><span class="line">  <span class="attr">totalCount:</span> <span class="number">1000</span></span><br><span class="line">  <span class="comment"># 接口错误重试数</span></span><br><span class="line">  <span class="attr">retryCount:</span> <span class="number">300</span></span><br><span class="line">  <span class="comment"># openAPI地址</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">&quot;https://api2.iotsdk.com&quot;</span></span><br><span class="line"><span class="attr">m2m:</span></span><br><span class="line">  <span class="attr">apiPort:</span> <span class="number">8082</span></span><br><span class="line">  <span class="attr">m2mToken:</span> <span class="string">&quot;Z2l6d2l0c19tMm0gcm9ja3M=&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Config <span class="keyword">struct</span> &#123;</span><br><span class="line">	Parameter <span class="keyword">struct</span> &#123;</span><br><span class="line">		OriginPk   <span class="type">string</span> <span class="string">`yaml:&quot;originPk&quot;`</span></span><br><span class="line">		OriginPs   <span class="type">string</span> <span class="string">`yaml:&quot;originPs&quot;`</span></span><br><span class="line">		TargetPk   <span class="type">string</span> <span class="string">`yaml:&quot;targetPk&quot;`</span></span><br><span class="line">		TargetPs   <span class="type">string</span> <span class="string">`yaml:&quot;targetPs&quot;`</span></span><br><span class="line">		TotalCount <span class="type">int</span>    <span class="string">`yaml:&quot;totalCount&quot;`</span></span><br><span class="line">		RetryCount <span class="type">int</span>    <span class="string">`yaml:&quot;retryCount&quot;`</span></span><br><span class="line">		URL        <span class="type">string</span> <span class="string">`yaml:&quot;url&quot;`</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ParseConfig</span><span class="params">(configFile <span class="type">string</span>, config *Config)</span></span> (Config, <span class="type">error</span>) &#123;</span><br><span class="line">	data, err := ioutil.ReadFile(configFile)</span><br><span class="line">	fmt.Println(<span class="type">string</span>(data))</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;failed to read config file %s: %v&quot;</span>, configFile, err)</span><br><span class="line">		<span class="keyword">return</span> *config, <span class="literal">nil</span></span><br><span class="line">	&#125;</span><br><span class="line">	err = yaml.Unmarshal(data, config)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;failed to unmarshal config file %s: %v&quot;</span>, configFile, err)</span><br><span class="line">		<span class="keyword">return</span> *config, <span class="literal">nil</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> *config, <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> config Config</span><br><span class="line">	<span class="keyword">var</span> err <span class="type">error</span></span><br><span class="line">	str, _ := os.Getwd()	#注意不同系统，返回不同，在命令行下面使用</span><br><span class="line">	config, err = ParseConfig(path.Join(str, ConfigFile), &amp;config)		#path.join会兼容大部分系统文件分隔符</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;config.yaml load error&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(<span class="string">&quot;config:&quot;</span>, config)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

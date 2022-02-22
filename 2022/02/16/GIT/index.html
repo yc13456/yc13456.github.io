@@ -106,7 +106,7 @@
 <p>40万次请求（第一次缓存，第一次读）<br>10 个客户端（5个。5个）</p>
 <h2 id="go-get-访问私有仓库的问题"><a href="#go-get-访问私有仓库的问题" class="headerlink" title="go get 访问私有仓库的问题"></a>go get 访问私有仓库的问题</h2><ul>
 <li>给仓库打 tag，这样仓库地址可以被识别</li>
-<li>export GOPRIVATE&#x3D;<a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#103;&#x69;&#x74;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a>；go build 时，系统不会用 GOPROXY 以及校验 SUM</li>
+<li>export GOPRIVATE&#x3D;<a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>；go build 时，系统不会用 GOPROXY 以及校验 SUM</li>
 <li>调整 git https 为 ssh</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global url.&quot;git@gitlab.gizwits.com:&quot;.insteadof &quot;https://gitlab.gizwits.com/&quot;</span><br></pre></td></tr></table></figure>
