@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>go-tool-code - Hexo</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <meta name="keywords" content="Fechin,"> 
+    <meta name="description" content="存储视频ffmpeg12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849,"> 
+    <meta name="author" content="John Doe"> 
+    <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="go-tool-code - Hexo"/>
+    <meta name="twitter:description" content="存储视频ffmpeg12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849,"/>
+    
+    
+    
+    
+    <meta property="og:site_name" content="Hexo"/>
+    <meta property="og:type" content="object"/>
+    <meta property="og:title" content="go-tool-code - Hexo"/>
+    <meta property="og:description" content="存储视频ffmpeg12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849,"/>
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">Hexo</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">go-tool-code</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">go-tool-code</h1>
+        <div class="stuff">
+            <span>三月 08, 2022</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <h1 id="存储视频"><a href="#存储视频" class="headerlink" title="存储视频"></a>存储视频</h1><h2 id="ffmpeg"><a href="#ffmpeg" class="headerlink" title="ffmpeg"></a>ffmpeg</h2><figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;errors&quot;</span></span><br><span class="line">	<span class="string">&quot;io&quot;</span></span><br><span class="line">	<span class="string">&quot;log&quot;</span></span><br><span class="line">	<span class="string">&quot;os&quot;</span></span><br><span class="line">	<span class="string">&quot;os/exec&quot;</span></span><br><span class="line">	<span class="string">&quot;path&quot;</span></span><br><span class="line">	<span class="string">&quot;syscall&quot;</span></span><br><span class="line">	<span class="string">&quot;time&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	filePath   = <span class="string">&quot;/data/videos/data/video/&quot;</span></span><br><span class="line">	deviceDisk = <span class="string">&quot;/dev/sda4&quot;</span></span><br><span class="line">	dev        = <span class="string">&quot;/dev/video0&quot;</span></span><br><span class="line">	frameRate  = <span class="string">&quot;30&quot;</span></span><br><span class="line">	bitRate    = <span class="string">&quot;18276000&quot;</span></span><br><span class="line">	videoTime  = <span class="string">&quot;1800&quot;</span> <span class="comment">//30分钟</span></span><br><span class="line">	videoCount = <span class="number">10</span></span><br><span class="line">	crf        = <span class="string">&quot;22&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">diskUsage</span><span class="params">(path <span class="type">string</span>)</span></span> (<span class="type">uint64</span>, <span class="type">uint64</span>) &#123;</span><br><span class="line">	fs := syscall.Statfs_t&#123;&#125;</span><br><span class="line">	err := syscall.Statfs(path, &amp;fs)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> fs.Blocks * <span class="type">uint64</span>(fs.Bsize), fs.Bfree * <span class="type">uint64</span>(fs.Bsize)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">disk</span><span class="params">(Disk <span class="type">string</span>)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">	all, free := diskUsage(Disk)</span><br><span class="line">	<span class="keyword">if</span> all == <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> errors.New(<span class="string">&quot;mount / error&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> <span class="type">float64</span>(free)/<span class="type">float64</span>(all) &lt; <span class="number">0.2</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> errors.New(<span class="string">&quot;not enough local memory&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	logFile, err := os.OpenFile(<span class="string">&quot;save.log&quot;</span>, os.O_CREATE|os.O_APPEND|os.O_RDWR, <span class="number">0666</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(err)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> logFile.Close()</span><br><span class="line">	mw := io.MultiWriter(os.Stdout, logFile)</span><br><span class="line">	log.SetOutput(mw)</span><br><span class="line"></span><br><span class="line">	_, err = os.Stat(filePath)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Println(<span class="string">&quot;deivce not mount or mount error&quot;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> cstSh, _ = time.LoadLocation(<span class="string">&quot;Asia/Shanghai&quot;</span>)</span><br><span class="line">	retry := <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; videoCount; i++ &#123;</span><br><span class="line">		err := disk(deviceDisk)</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			log.Println(err)</span><br><span class="line">			<span class="keyword">return</span></span><br><span class="line">		&#125;</span><br><span class="line">		videoName := path.Join(filePath, time.Now().In(cstSh).Format(<span class="string">&quot;20060102_150405&quot;</span>)+<span class="string">&quot;.mp4&quot;</span>)</span><br><span class="line">		log.Println(<span class="string">&quot;start save video:&quot;</span>, videoName)</span><br><span class="line">		cmd := exec.Command(<span class="string">&quot;ffmpeg&quot;</span>,</span><br><span class="line">			<span class="string">&quot;-i&quot;</span>, dev,</span><br><span class="line">			<span class="string">&quot;-pix_fmt&quot;</span>, <span class="string">&quot;yuv420p&quot;</span>,</span><br><span class="line">			<span class="string">&quot;-preset:v&quot;</span>, <span class="string">&quot;ultrafast&quot;</span>,</span><br><span class="line">			<span class="string">&quot;-level&quot;</span>, <span class="string">&quot;3.1&quot;</span>,</span><br><span class="line">			<span class="string">&quot;-tune&quot;</span>, <span class="string">&quot;grain&quot;</span>,</span><br><span class="line">			<span class="string">&quot;-profile:v&quot;</span>, <span class="string">&quot;high&quot;</span>,</span><br><span class="line">			<span class="string">&quot;-vcodec&quot;</span>, <span class="string">&quot;h264&quot;</span>,</span><br><span class="line">			<span class="string">&quot;-r&quot;</span>, frameRate,</span><br><span class="line">			<span class="string">&quot;-b&quot;</span>, bitRate,</span><br><span class="line">			<span class="string">&quot;-t&quot;</span>, videoTime,</span><br><span class="line">			<span class="string">&quot;-crf&quot;</span>, crf,</span><br><span class="line">			videoName,</span><br><span class="line">		)</span><br><span class="line">		err = cmd.Run()</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			log.Println(<span class="string">&quot;collect video&quot;</span>, videoName, <span class="string">&quot;err&quot;</span>)</span><br><span class="line">			i = <span class="number">-1</span></span><br><span class="line">			retry++</span><br><span class="line">			<span class="keyword">if</span> retry &gt; <span class="number">3</span> &#123;</span><br><span class="line">				log.Println(<span class="string">&quot;ffmpeg save video retry error&quot;</span>, videoName, <span class="string">&quot;err&quot;</span>)</span><br><span class="line">				<span class="keyword">return</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		time.Sleep(time.Second * <span class="number">10</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="gocv"><a href="#gocv" class="headerlink" title="gocv"></a>gocv</h2><figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;gocv.io/x/gocv&quot;</span></span><br><span class="line">	<span class="string">&quot;os&quot;</span></span><br><span class="line">	<span class="string">&quot;path&quot;</span></span><br><span class="line">	<span class="string">&quot;time&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	filePath   = <span class="string">&quot;/data/videos/&quot;</span></span><br><span class="line">	dev        = <span class="string">&quot;/dev/video0&quot;</span></span><br><span class="line">	Fps        = <span class="number">30</span></span><br><span class="line">	videoTime  = <span class="number">10</span></span><br><span class="line">	videoCount = <span class="number">2</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">loader</span><span class="params">()</span></span> <span class="type">error</span> &#123;</span><br><span class="line">	<span class="keyword">var</span> cstSh, _ = time.LoadLocation(<span class="string">&quot;Asia/Shanghai&quot;</span>)</span><br><span class="line">	capture, err := gocv.VideoCaptureFile(dev)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> capture.Close()</span><br><span class="line"></span><br><span class="line">	videoName := path.Join(filePath, time.Now().In(cstSh).Format(<span class="string">&quot;20060102_150405&quot;</span>)+<span class="string">&quot;.mp4&quot;</span>)</span><br><span class="line">	fmt.Println(<span class="string">&quot;start loader&quot;</span>, videoName)</span><br><span class="line">	<span class="keyword">var</span> img = gocv.NewMat()</span><br><span class="line">	<span class="keyword">defer</span> img.Close()</span><br><span class="line"></span><br><span class="line">	width, height := capture.Get(gocv.VideoCaptureFrameWidth), capture.Get(gocv.VideoCaptureFrameHeight)</span><br><span class="line">	videoWriter, err := gocv.VideoWriterFile(videoName, <span class="string">&quot;mp4v&quot;</span>, <span class="type">float64</span>(Fps), <span class="type">int</span>(width), <span class="type">int</span>(height), <span class="literal">true</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> videoWriter.Close()</span><br><span class="line"></span><br><span class="line">	startTime := time.Now()</span><br><span class="line">	<span class="keyword">for</span> time.Now().Sub(startTime).Seconds() &lt;= videoTime &#123;</span><br><span class="line">		ok := capture.Read(&amp;img)</span><br><span class="line">		<span class="keyword">if</span> !ok &#123;</span><br><span class="line">			<span class="keyword">continue</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> err = videoWriter.Write(img); err != <span class="literal">nil</span> &#123;</span><br><span class="line">			<span class="keyword">continue</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	_ = os.MkdirAll(filePath, os.ModeDir|os.ModePerm)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; videoCount; i++ &#123;</span><br><span class="line">		<span class="keyword">if</span> err := loader(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">			i--</span><br><span class="line">			fmt.Println(<span class="string">&quot;loader error&quot;</span>, err)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        
+                            <li title="0" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                        
+                            <li title="1" data-url="http://link.hhtjim.com/163/425570952.mp3"></li>
+                        
+                    
+                </ul>
+            
+        </div>
+        
+    <div id="gitalk-container" class="comment link"
+		data-enable="false"
+        data-ae="false"
+        data-ci=""
+        data-cs=""
+        data-r=""
+        data-o=""
+        data-a=""
+        data-d="false"
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+</body>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
